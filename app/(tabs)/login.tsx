@@ -1,22 +1,26 @@
+import { Link } from "expo-router";
 import React, { useState } from "react";
-import { View, Text, StyleSheet, Switch, TextInput, DrawerLayoutAndroid } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Switch,
+  TextInput,
+  DrawerLayoutAndroid,
+} from "react-native";
 // import { Switch } from "react-native-gesture-handler";
 
 export default function Login() {
   const [isEnabled, setIsEnabled] = useState(false);
 
-  const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
-
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>This is the Login Screen</Text>
+      <Text style={styles.header}>Login</Text>
 
-      <Text style={styles.text}>
-        Already a user? {isEnabled ? "Yes" : "No"}
-      </Text>
-      <Switch value={isEnabled} onValueChange={toggleSwitch} />
       <TextInput placeholder="Email" style={styles.input} />
       <TextInput placeholder="Password" style={styles.input} secureTextEntry />
+      <Text style={styles.text}>Not a user?</Text>
+      <Link href="/signup" style={styles.link}>Go to Sign Up</Link>
       {/* <DrawerLayoutAndroid drawerBackgroundColor="rgba(0,0,0,0.5)" renderNavigationView={function (): React.JSX.Element {
               throw new Error("Function not implemented.");
           } } /> */}
@@ -31,10 +35,17 @@ const styles = StyleSheet.create({
     alignItems: "center", // centers horizontally
     backgroundColor: "#fff",
   },
-  text: {
+  header: {
     fontSize: 20,
     fontWeight: "bold",
     color: "#333",
+    padding: 12,
+  },
+  text: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "#333",
+    padding: 12,
   },
   input: {
     height: 40,
@@ -43,5 +54,13 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     paddingHorizontal: 10,
     width: "80%",
+    padding: 12,
+  },
+  link: {
+    marginLeft: 5,
+    justifyContent: "center",
+    fontSize: 12,
+    fontWeight: "bold",
+    color: "#007AFF", // iOS blue link color
   },
 });
