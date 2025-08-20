@@ -4,7 +4,7 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    // padding: 20,
+    padding: 20,
     backgroundColor: "#fff",
   },
   title: {
@@ -34,23 +34,25 @@ export default StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
-  searchBox: {
-    position: "absolute",
-    top: 10,           // Moves below status bar
-    left: 15,
-    right: 15,
-    height: 50,
-    backgroundColor: "white",
-    borderRadius: 8,
-    paddingHorizontal: 15,
-    zIndex: 1000,
-    elevation: 5,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
-  },
   map: {
     flex: 1,
+  },
+  camera: {
+    flex: 1,
+  },
+  buttonContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    backgroundColor: 'transparent',
+    margin: 64,
+  },
+  message: {
+    textAlign: 'center',
+    paddingBottom: 10,
+  },
+  text: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: 'white',
   },
 });
