@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, TextInput, StyleSheet } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import * as Location from "expo-location";
+import styles from "../styles/exploreStyle"; // Importing styles from exploreStyle.tsx
 
 export default function MapScreen() {
   const [region, setRegion] = useState({
@@ -48,22 +49,3 @@ export default function MapScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  searchBox: {
-    position: "absolute",
-    top: 40,
-    left: 20,
-    right: 20,
-    zIndex: 1,
-    backgroundColor: "#fff",
-    padding: 10,
-    borderRadius: 8,
-    elevation: 3,
-  },
-  map: {
-    flex: 1,
-  },
-});
