@@ -5,15 +5,35 @@ import styles from "../styles/loginStyle";
 import {
   View,
   Text,
-  StyleSheet,
   TextInput,
   TouchableOpacity,
   ScrollView,
+  Alert
 } from "react-native";
 
 export default function Login() {
-  const [isEnabled, setIsEnabled] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const router = useRouter();
+
+  const handleLogin = () => {
+  if (!email || !password) {
+    Alert.alert("Error", "Please enter email & password");
+    return;
+  }
+
+  Alert.alert(
+    "Logged in Successfully!!",
+    "Welcome back!",
+    [
+      {
+        text: "Continue",
+        onPress: () => router.replace("/"), 
+      },
+    ]
+  );
+};
+
 
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
@@ -23,13 +43,23 @@ export default function Login() {
           Simplified Spaces
         </Text>
 
-        <TextInput placeholder="Email" style={styles.input} />
-        <TextInput placeholder="Password" style={styles.input} secureTextEntry />
+        <TextInput 
+          placeholder="Email" 
+          style={styles.input} 
+          value={email}
+          onChangeText={setEmail}
+        />
+        <TextInput 
+          placeholder="Password" 
+          style={styles.input} 
+          secureTextEntry 
+          value={password}
+          onChangeText={setPassword}
+        />
 
-        {/* Custom button */}
         <TouchableOpacity
           style={styles.button}
-          onPress={() => router.replace("/")}
+          onPress={handleLogin}
         >
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>

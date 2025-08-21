@@ -1,7 +1,7 @@
 // app/signup.tsx
 import React, { useState } from "react";
 import { CameraView, CameraType, useCameraPermissions } from 'expo-camera';
-import styles from "./styles/signupStyle"; 
+import styles from "../styles/signupStyle"; 
 import {
   View,
   Text,

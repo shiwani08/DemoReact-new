@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import styles from './styles/teamsStyle';
+import styles from '../styles/teamsStyle';
 
 const Help = () => {
   const navigation = useNavigation();

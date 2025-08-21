@@ -1,8 +1,8 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
+import { View, Text, ScrollView, Image } from "react-native";
 import styles from "../styles/indexStyle";
 import { Appbar } from "react-native-paper";
-import { useRouter } from 'expo-router';
+import { useRouter } from "expo-router";
 
 import type { StackNavigationProp } from "@react-navigation/stack";
 
@@ -13,12 +13,7 @@ type IndexScreenProps = {
   back?: boolean;
 };
 
-export default function IndexScreen({
-  navigation,
-  route, 
-  options,
-  back,
-}: IndexScreenProps) {
+export default function IndexScreen({}: IndexScreenProps) {
   const router = useRouter();
   return (
     <>
@@ -29,20 +24,24 @@ export default function IndexScreen({
           titleStyle={styles.appbarTitle}
         />
         <Appbar.Action
-          icon="help-circle" 
-          onPress={() => router.navigate('/help')}
+          icon="account-circle"
+          onPress={() => router.navigate("./screens/profile")}
+        />
+        <Appbar.Action
+          icon="help-circle"
+          onPress={() => router.navigate("./screens/help")}
         />
       </Appbar.Header>
       <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.container}>
-          <View style={styles.logoContainer}>
+          {/* <View style={styles.logoContainer}>
             <Image
               source={require("../../assets/images/logo.jpeg")}
               style={styles.logo}
               resizeMode="contain"
             />
             <Text style={styles.heading}>Simplified Spaces</Text>
-          </View>
+          </View> */}
 
           <View style={styles.section}>
             <View style={styles.sectionContent}>
