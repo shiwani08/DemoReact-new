@@ -5,6 +5,12 @@ export default StyleSheet.create({
     padding: 20,
     backgroundColor: "#a1ebd5ff",
   },
+  appbarTitle: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#343A40",
+    letterSpacing: 0.5,
+  },
   logoContainer: {
     flexDirection: "row", 
     alignItems: "center", 
@@ -17,7 +23,7 @@ export default StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 20,
     textAlign: "center",
-    padding: 10,
+    // padding: 10,
   },
   logo: {
     width: 50,
