@@ -32,21 +32,15 @@ export default function IndexScreen({}: IndexScreenProps) {
           onPress={() => router.navigate("./screens/help")}
         />
       </Appbar.Header>
+        <View>
+          <Text style={styles.heading}>Select Today's agenda!!</Text>
+        </View>
       <ScrollView contentContainerStyle={styles.container}>
-        <View style={styles.container}>
-          {/* <View style={styles.logoContainer}>
-            <Image
-              source={require("../../assets/images/logo.jpeg")}
-              style={styles.logo}
-              resizeMode="contain"
-            />
-            <Text style={styles.heading}>Simplified Spaces</Text>
-          </View> */}
-
+        <View style={styles.section}>
           <View style={styles.section}>
             <View style={styles.sectionContent}>
               <View style={styles.textContainer}>
-                <Text style={styles.sectionText}>1. Book an Office</Text>
+                <Text style={styles.sectionText}>Book an Office</Text>
                 <Text style={styles.sectionDesc}>
                   This is a demo description about booking an office. You can
                   add details here about how users can book and what facilities
@@ -60,49 +54,59 @@ export default function IndexScreen({}: IndexScreenProps) {
               />
             </View>
           </View>
-
-          <View style={styles.section}>
-            <Text style={styles.sectionText}>2. Book a Room</Text>
-          </View>
-
-          <View style={styles.section}>
-            <Text style={styles.sectionText}>3. Select the Agenda</Text>
-          </View>
-
-          <View style={styles.section}>
-            <Text style={styles.sectionText}>1. Book an Office</Text>
-          </View>
-
-          <View style={styles.section}>
-            <Text style={styles.sectionText}>2. Book a Room</Text>
-          </View>
-
-          <View style={styles.section}>
-            <Text style={styles.sectionText}>3. Select the Agenda</Text>
-          </View>
-          <View style={styles.section}>
-            <Text style={styles.sectionText}>1. Book an Office</Text>
-          </View>
-
-          <View style={styles.section}>
-            <Text style={styles.sectionText}>2. Book a Room</Text>
-          </View>
-
-          <View style={styles.section}>
-            <Text style={styles.sectionText}>3. Select the Agenda</Text>
-          </View>
-          <View style={styles.section}>
-            <Text style={styles.sectionText}>1. Book an Office</Text>
-          </View>
-
-          <View style={styles.section}>
-            <Text style={styles.sectionText}>2. Book a Room</Text>
-          </View>
-
-          <View style={styles.section}>
-            <Text style={styles.sectionText}>3. Select the Agenda</Text>
-          </View>
         </View>
+      <View style={styles.section}>
+        <View style={styles.sectionContent}>
+              <View style={styles.textContainer}>
+                <Text style={styles.sectionText}>Book a Room</Text>
+                <Text style={styles.sectionDesc}>
+                  This is a demo description about booking a room. You can
+                  add details here about how users can book and what facilities
+                  are available.
+                </Text>
+              </View>
+
+              <Image
+                source={require("../../assets/images/demo.jpg")}
+                style={styles.sectionImage}
+              />
+            </View>
+      </View>
+
+      <View style={styles.section}>
+        <View style={styles.sectionContent}>
+              <View style={styles.textContainer}>
+                <Text style={styles.sectionText}>Book for a team</Text>
+                <Text style={styles.sectionDesc}>
+                  This is a demo description about booking for a team. You can
+                  add details here about how users can book and what facilities
+                  are available.
+                </Text>
+              </View>
+
+              <Image
+                source={require("../../assets/images/demo.jpg")}
+                style={styles.sectionImage}
+              />
+            </View>
+      </View>
+      <View style={styles.section}>
+        <View style={styles.sectionContent}>
+              <View style={styles.textContainer}>
+                <Text style={styles.sectionText}>Book a virtual room</Text>
+                <Text style={styles.sectionDesc}>
+                  This is a demo description about booking for a team. You can
+                  add details here about how users can book and what facilities
+                  are available.
+                </Text>
+              </View>
+
+              <Image
+                source={require("../../assets/images/demo.jpg")}
+                style={styles.sectionImage}
+              />
+            </View>
+      </View>
       </ScrollView>
     </>
   );

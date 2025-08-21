@@ -3,7 +3,6 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
   container: {
     padding: 20,
-    backgroundColor: "#a1ebd5ff",
   },
   appbarTitle: {
     fontSize: 20,
@@ -19,10 +18,11 @@ export default StyleSheet.create({
     padding: 20
   },
   heading: {
-    fontSize: 30,
+    fontSize: 20,
     fontWeight: "bold",
-    marginBottom: 20,
+    marginBottom: 10,
     textAlign: "center",
+    marginTop: 20,
     // padding: 10,
   },
   logo: {
@@ -33,7 +33,7 @@ export default StyleSheet.create({
   section: {
     marginBottom: 20,
     padding: 10,
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#c6f0e3ff",
     borderRadius: 8,
   },
 
@@ -60,8 +60,8 @@ export default StyleSheet.create({
   },
 
   sectionImage: {
-    width: 100,
-    height: 100,
+    width: 150,
+    height: 150,
     borderRadius: 8,
   },
 });
